@@ -6,6 +6,6 @@ module modular.main {
     requires spring.context;
     opens com.modular.main to spring.core, spring.beans, spring.context;
     opens com.modular.main.rest to spring.beans, spring.web, spring.core;
-
+    exports com.modular.main;
 
 }
