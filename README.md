@@ -12,3 +12,17 @@ jdk-11-mini-runtime | name of the jre folder which will be created after executi
 ##Generating Module-info for legacy jar
 jdeps --module-path automatic-modules --generate-module-info . snakeyaml-1.23.jar
 refer:-https://examples.javacodegeeks.com/core-java/java-9-jdeps-example/
+
+1. to update a jar simply open it as zip and work on it.
+2. jar tvf {JAR} -> to check contents inside a jar file
+3. jar uvf {JAR} {file/package structure} *
+4. genrating module-info.java 
+	jdeps --generate-module-info {DIR} {JAR}
+5. extract jar file
+	jar vxf {JAR}
+6. compile module-info to create a class file which could be loaded into jar
+	a. dir  /B  /S | find ".java" > sourcePath.txt
+	b. javac --module-path {module-info.java_PATH} -d {compliledSourceFolderName} @sourcePath.txt
+	c. jar uvf {JAR} -C classes module-info.class
+				OR
+	d. jar --update --file {JAR} --module-version 1.0 -C . module-info.class
