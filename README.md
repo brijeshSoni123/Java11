@@ -29,4 +29,4 @@ refer:-https://examples.javacodegeeks.com/core-java/java-9-jdeps-example/
 
 
 ### minimum configuration needed for Spring Boot 2.0.X
-	* jlink --module-path jmods --verbose --add-modules java.base,java.logging,java.xml,jdk.unsupported,java.sql,java.naming,java.desktop,java.management,java.security.jgss,java.instrument --compress 2 --no-header-files --output java-10-minimal
+	* jlink --module-path jmods --verbose --add-modules java.base,java.logging,java.xml,jdk.unsupported,java.sql,java.naming,java.desktop,java.management,java.security.jgss,java.instrument --compress 2 --no-header-files --output java-11-minimal
