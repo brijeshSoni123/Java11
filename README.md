@@ -26,3 +26,7 @@ refer:-https://examples.javacodegeeks.com/core-java/java-9-jdeps-example/
 	c. jar uvf {JAR} -C classes module-info.class
 				OR
 	d. jar --update --file {JAR} --module-version 1.0 -C . module-info.class
+
+
+### minimum configuration needed for Spring Boot 2.0.X
+	* jlink --module-path jmods --verbose --add-modules java.base,java.logging,java.xml,jdk.unsupported,java.sql,java.naming,java.desktop,java.management,java.security.jgss,java.instrument --compress 2 --no-header-files --output java-10-minimal
